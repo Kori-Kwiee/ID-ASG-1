@@ -1,22 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #180404;
   color: rgb(255, 246, 246);
+  animation: textEntrance 2s ease-in-out; 
+  
 }
 
 header {
-  background: #1d191b;
+  background: #180404;
   padding: 20px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 35px;
   font-weight: bold;
+  font-family:  'Audiowide', monospace;
+  animation: textEntrance 2s ease-in-out; 
+
 }
+
+section {
+  background: rgba(69, 11, 24, 0.326); 
+  border: 2px solid #9b003e;       
+  border-radius: 10px;
+  padding: 50px;
+  max-width: 600px;   
+  width: 70%;               
+  margin: 40px auto;   
+  box-shadow: 0 0 10px #ff0000;
+  font-family: 'Abril Fatface';
+  font-size: large;
+  position: relative;
+  animation: textEntrance 2s ease-in-out; 
+  
+}
+
 
 nav {
   background: #2E0D0D;
   padding: 10px;
   text-align: center;
+  font-size: 120%;
+  font-family: 'Orbitron', 'Baloo 2', sans-serif;
+  animation: textEntrance 2s ease-in-out; 
 }
 
 nav a {
@@ -24,33 +57,187 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  animation: textEntrance 2s ease-in-out; 
+}
+
+.divider {
+  height: 4px;
+  width: 60%;
+  margin: 40px auto;
+  border-radius: 2px;
+  background: linear-gradient(to right, #ef5c00c8, #ff006fd1);
+  animation: lineGlitch 0.3s infinite;
+  animation: textEntrance 5s ease-in-out; 
+}
+
+@keyframes lineGlitch {
+  0%   { transform: scaleY(0); }
+  20%  { transform: scaleY(1.2); filter: hue-rotate(30deg) saturate(150%); }
+  40%  { transform: scaleY(0.8); filter: hue-rotate(-30deg) saturate(150%); }
+  60%  { transform: scaleY(1.1); filter: contrast(200%); }
+  80%  { transform: scaleY(0.9); filter: saturate(200%); }
+  100% { transform: scaleY(1); filter: none; }
+}
+
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  animation: textEntrance 2s ease-in-out; 
+}
+
+footer {
+  background: #222;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  animation: textEntrance 2s ease-in-out; 
+}
+
+@keyframes textEntrance {
+  0% {
+
+    transform: translateY(10px);
+  }
+  100% {
+
+    transform: translateY(0);
+  }
 }
 
 .hero {
   background: url("images/mizi-karma-newest-release.jpg") center/cover no-repeat;
+  color: white;
   height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 50px;
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
   text-shadow: 2px 2px 5px black;
 }
 
-.hero {
+@media (max-width: 600px) {
+  .hero {
+    font-size: 200%;
+    height: 200px;
+    padding: 0 10px;         
+  }
+
+  main {
+    padding: 10px 20px;            /* reduce main block padding */
+    border-width: 2px;      
+  }
+}
+
+
+.hero a {
+  font-family: 'Orbitron', 'Press Start 2P', monospace, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 5px rgb(255, 0, 0), -2px -2px 5px rgb(0, 238, 255);
+  color: white;
+  text-decoration: none;
+  position: relative; /*ensures <a> text stays above glitch layers, without it glitch layers can overlap text.*/
+  z-index: 2; /*forces the text to be in front of the glitch effect*/
+}
+
+.hero a:visited{
   color: white;
 }
 
-.hero a:visited {
-  color: white;
-}
-
-.hero a:hover {
-  color:rgb(214, 10, 10) ;
+.hero a:hover{
   text-decoration: underline;
-  text-decoration-color: rgb(214, 10, 10);
+}
+
+/* Glitch layers */
+.hero a::before,
+.hero a::after {
+  content: "New Album Out Now!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 12px 25px;
+  text-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.hero a::before {
+  color: rgb(255, 0, 0);
+  z-index: -1;
+}
+
+.hero a::after {
+  color: rgb(0, 238, 255);
+  z-index: -1;
+}
+
+/* Hover activates glitch */
+.hero:hover a::before,
+.hero:hover a::after {
+  animation: glitch 0.3s infinite;
+  opacity: 1;
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0%   { transform: translate(0); }
+  20%  { transform: translate(-3px, 3px); }
+  40%  { transform: translate(3px, -3px); }
+  60%  { transform: translate(-3px, -3px); }
+  80%  { transform: translate(3px, 3px); }
+  100% { transform: translate(0); }
+}
+
+
+/* banner glitch animation */
+@keyframes heroGlitch {
+  0%   { transform: translate(0); filter: none; }
+  20%  { transform: translate(1px, 0px); filter: hue-rotate(20deg); }
+  40%  { transform: translate(0px, 0px); filter: hue-rotate(-20deg); }
+  60%  { transform: translate(0px, 0px); filter: contrast(150%); }
+  80%  { transform: translate(3px, 0px); filter: saturate(200%); }
+  100% { transform: translate(0); filter: none; }
+}
+
+.hero.glitch {
+  animation: heroGlitch 0.3s infinite;
+}
+/*I am desperate for a glitch for a traumatized Mizi*/
+
+#toggle-glitch-btn {
+  background: #2E0D0D;
+  color: #ff0000; 
+  display: block;
+  margin: 30px auto;
+  border-radius: 7px;
+  padding: 12px 25px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  
+}
+/* Glitch layers */
+#toggle-glitch-btn::before,
+#toggle-glitch-btn::after {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 12px 25px;
+  text-shadow: none;
+  opacity: 0;
+  background: inherit;
+  z-index: -1;
+  opacity: 0;
 }
 
 .mizi {
@@ -60,15 +247,4 @@ nav a {
   object-fit: cover;
 }
 
-section {
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-}
 
-footer {
-  background: #222;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}

@@ -3,14 +3,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alien Stage</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      ALIEN STAGE
-    </header>
+    <header>ALIEN STAGE</header>
 
     <nav>
       <a href="index.html">About</a>
@@ -21,16 +19,39 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="hero">      
-      <a href="https://open.spotify.com/album/3FOCNn4MK0Zo9vgpgqp7IH">New Album Out Now!</a>
+    <div class="hero">
+      <a href="https://open.spotify.com/album/3FOCNn4MK0Zo9vgpgqp7IH">
+        New Album Out Now!
+      </a>
     </div>
+
+    <button id="toggle-glitch-btn">Traumatize Mizi!</button>
 
     <section>
       <h2>About Alien Stage</h2>
       <p>
-        A reality audition program, has taken the alien world by storm, and its upcoming season is planned to be just as exciting. Contestants must sing for their survival, as the loser faces elimination. With a mix of thrilling performances and emotional journeys, Alien Stage promises to captivate audiences once again.
+        The Alien Stage is a televised singing competition hosted by the
+        Segyein, where their Human Pets perform musical numbers for a panel of
+        alien judges and a vast extraterrestial audience.
+      </p>
+
+      <p>
+        The stakes are absolute: <br />
+        losers are executed on the spot, while winners are granted temporary
+        reprieve and the opportunity to advance to the next round. The ultimate
+        prize other than survival is unclear, but it's speculated that it could
+        be a form of ambiguous "freedom" or elevated status within the
+        segyein-controlled society. For the segyein, the Alien Stage appears to
+        serve multiple purposes. It is a form of public entertainment, which
+        appears to sate the segyein's morbid fascination with human suffering,
+        emotions and creativity. It may also serve as a way to reinforce segyein
+        dominance, to discourage rebellion, and perhaps a perverse form of
+        population control. For humans, it could serve as a twisted outlet for
+        human ambition.
       </p>
     </section>
+
+    <div class="divider"></div>
 
     <section>
       <h2>Past Shows</h2>
@@ -39,12 +60,24 @@
         <li>Alien Stage Round 2 – Mizi vs Luka</li>
         <li>Alien Stage Round 3 – Till vs Ivan</li>
         <li>Alien Stage Round 4 – Till vs Luka</li>
+      </ul>
     </section>
-
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
 
-    
+    <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
 
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "Stop traumatized Mizi!";
+        } else {
+          toggleBtn.textContent = "Traumatize Mizi!";
+        }
+      });
+    </script>
   </body>
 </html>
