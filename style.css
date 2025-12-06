@@ -28,13 +28,13 @@ header {
 
 section {
   background: rgba(69, 11, 24, 0.326); 
-  border: 2px solid #9b003e;       
+  border: 2px solid #9b003ea4;       
   border-radius: 10px;
   padding: 50px;
   max-width: 600px;   
   width: 70%;               
   margin: 40px auto;   
-  box-shadow: 0 0 10px #ff0000;
+  box-shadow: 0 0 5px #0040ff;
   font-family: 'Abril Fatface';
   font-size: large;
   position: relative;
@@ -106,7 +106,6 @@ footer {
 }
 
 .hero {
-  background: url("images/mizi-karma-newest-release.jpg") center/cover no-repeat;
   color: white;
   height: 300px;
   display: flex;
@@ -117,6 +116,31 @@ footer {
   padding-left: 20px;
   padding-right: 20px;
   text-shadow: 2px 2px 5px black;
+}
+
+.hero-mizi {
+  background: url("images/mizi-karma.jpg") center/cover no-repeat;
+}
+
+.hero-ivan {
+  background: url("images/ivan-paratise.png") center/cover no-repeat;
+}
+
+.hero-till {
+  background: url("images/till-blink-gone.jpg") center/cover no-repeat;
+}
+
+.hero-luka {
+
+  background: url("images/luka-sacred-light.png") center/cover no-repeat;
+}
+
+.hero-hyuna {
+  background: url("images/hyuna-rec.jpg") center/cover no-repeat;
+}
+
+.hero-sua {
+  background: url("images/sua-pst.jpg") center/cover no-repeat;
 }
 
 @media (max-width: 600px) {
@@ -155,7 +179,7 @@ footer {
 /* Glitch layers */
 .hero a::before,
 .hero a::after {
-  content: "New Album Out Now!";
+  content: attr(data-text) ;
   position: absolute;
   left: 0;
   top: 0;
@@ -208,7 +232,7 @@ footer {
 .hero.glitch {
   animation: heroGlitch 0.3s infinite;
 }
-/*I am desperate for a glitch for a traumatized Mizi*/
+/*I am desperate for a glitch for a traumatized child*/
 
 #toggle-glitch-btn {
   background: #2E0D0D;
@@ -240,10 +264,10 @@ footer {
   opacity: 0;
 }
 
-.mizi {
+.profile-pic {
   width: 200px;
   height: 300px;
-  border-radius: 100px;
+  border-radius: 70px;
   object-fit: cover;
 }
 

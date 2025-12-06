@@ -19,6 +19,15 @@
       <a href="contact.html">Contact</a>
     </nav>
 
+    <div class="hero hero-luka" >
+      <a href="https://open.spotify.com/playlist/0hjKU06sgGEQVD8KTBdiwp" 
+      data-text="Merchandise" 
+      target="_blank">
+        Merchandise
+      </a>
+    </div>
+
+    <button id="toggle-glitch-btn">Traumatize them!</button>
 
     <section>
       <h2>Merchandise</h2>
@@ -36,5 +45,20 @@
     </section>
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
+    
+        <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
+
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "Stop trauma!";
+        } else {
+          toggleBtn.textContent = "Traumatize them!";
+        }
+      });
+    </script>
 
 </html>

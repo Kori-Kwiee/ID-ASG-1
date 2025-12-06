@@ -19,13 +19,17 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="hero">
-      <a href="https://open.spotify.com/album/3FOCNn4MK0Zo9vgpgqp7IH">
+    <div class="hero hero-mizi">
+      <a
+        href="https://open.spotify.com/album/3FOCNn4MK0Zo9vgpgqp7IH"
+        data-text="New Album Out Now!"
+        target="_blank"
+      >
         New Album Out Now!
       </a>
     </div>
 
-    <button id="toggle-glitch-btn">Traumatize Mizi!</button>
+    <button id="toggle-glitch-btn">Traumatize them!</button>
 
     <section>
       <h2>About Alien Stage</h2>
@@ -73,9 +77,9 @@
         hero.classList.toggle("glitch");
 
         if (hero.classList.contains("glitch")) {
-          toggleBtn.textContent = "Stop traumatized Mizi!";
+          toggleBtn.textContent = "Stop trauma!";
         } else {
-          toggleBtn.textContent = "Traumatize Mizi!";
+          toggleBtn.textContent = "Traumatize them!";
         }
       });
     </script>

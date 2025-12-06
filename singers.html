@@ -18,13 +18,40 @@
       <a href="tour.html">Tour</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <div class="hero hero-ivan" >
+      <a href="https://open.spotify.com/playlist/0hjKU06sgGEQVD8KTBdiwp" 
+      data-text="Profile" 
+      target="_blank">
+        Profile
+      </a>
+    </div>
     
+    <button id="toggle-glitch-btn">Traumatize them!</button>
+
     <section id="singers">
       <h2>Singers</h2>
-      <p>Meet our talented competitors:</p>
-      <img class="mizi" src="images/mizi.jpg" alt="mizi">
+      <h3>Meet our talented competitors:</h3>
+      <div class="profile">
+        <img class="profile-pic" src="images/mizi.jpg" alt="mizi"> 
+        <p class="profile-name"><strong>Mizi</strong></p>
+      </div>
     </section>
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
-    
+
+        <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
+
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "Stop trauma!";
+        } else {
+          toggleBtn.textContent = "Traumatize them!";
+        }
+      });
+    </script>
 </html>

@@ -18,8 +18,18 @@
       <a href="tour.html">Tour</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <div class="hero hero-hyuna" >
+      <a href="https://open.spotify.com/playlist/0hjKU06sgGEQVD8KTBdiwp" 
+      data-text="Tour Dates" 
+      target="_blank">
+        Tour Dates
+      </a>
+    </div>
+
+    <button id="toggle-glitch-btn">Traumatize them!</button>
     
-        <section>
+    <section>
       <h2>Tour Dates</h2>
       <ul>
         <li>Jan 10 – Singapore</li>
@@ -31,4 +41,18 @@
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
 
+        <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
+
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "Stop trauma!";
+        } else {
+          toggleBtn.textContent = "Traumatize them!";
+        }
+      });
+    </script>
 </html>
