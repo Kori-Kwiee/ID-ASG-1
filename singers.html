@@ -32,15 +32,70 @@
     <section id="singers">
       <h2>Singers</h2>
       <h3>Meet our talented competitors:</h3>
-      <div class="profile">
-        <img class="profile-pic" src="images/mizi.jpg" alt="mizi"> 
-        <p class="profile-name"><strong>Mizi</strong></p>
+
+      <div class="profile-wrapper">
+        <p class="profile-name">Mizi</p>
+        <div class="profile">
+          <img class="profile-pic left" src="images/mizi.jpg" alt="mizi"> 
+          <img class="profile-pic right hidden" src="images/mizi-profile.jpg" alt="mizi-profile">
+          
+        </div>
       </div>
+
+      <div class="profile-wrapper">
+          <p class="profile-name"> Sua </p>
+        <div class="profile">
+          <img class="profile-pic left" src="images/sua.jpg" alt="sua">
+          <img class="profile-pic right" src="images/sua-profile.jpg" alt="sua-profile">
+        </div>
+      </div>
+
+      <div class="profile-wrapper">
+          <p class="profile-name"> Ivan </p>
+          <div class="profile">
+          <img class="profile-pic left" src="images/ivan.jpg" alt="ivan">
+          <img class="profile-pic right" src="images/ivan-profile.jpg" alt="ivan-profile">
+          
+        </div>
+      </div>
+
+      <div class="profile-wrapper">
+          <p class="profile-name"> Till </p>
+          <div class="profile">
+          <img class="profile-pic left" src="images/till.jpg" alt="till">
+          <img class="profile-pic right" src="images/till-profile.jpg" alt="till-profile">
+        
+        </div>
+      </div>
+
+      <div class="profile-wrapper">
+          <p class="profile-name"> Hyuna </p>
+          <div class="profile">
+          <img class="profile-pic left" src="images/hyuna.jpg" alt="hyuna">
+          <img class="profile-pic right" src="images/hyuna-profile.jpg" alt="hyuna-profile"> 
+          
+        </div>
+      </div>
+
+      <div class="profile-wrapper">
+          <p class="profile-name"> Luka </p>
+          <div class="profile">
+          <img class="profile-pic left" src="images/luka.jpg" alt="luka">
+          <img class="profile-pic right" src="images/luka-profile.jpg" alt="luka-profile">
+          
+        </div>
+      </div>
+
+      <div id="modal" class="modal hidden">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img" src="">
+      </div>
+
     </section>
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
 
-        <script>
+    <script>
       const toggleBtn = document.getElementById("toggle-glitch-btn");
       const hero = document.querySelector(".hero");
 
@@ -54,4 +109,5 @@
         }
       });
     </script>
+
 </html>
