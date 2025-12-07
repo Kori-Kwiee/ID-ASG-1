@@ -122,7 +122,7 @@ Technologies Used
                 Yes nav on top is clear
             Know which buttons to press
 
-                For the banner maybe not, those who are slow, they will need to find that out themselves/ stumble upon it.
+                For the banner maybe not, those who are slow, they will need to find that out themselves/ stumble upon it. When pressing the banner the glitch will activate, but to get to the link they will need to press the text itself..
                 I did try to make the fact that the music/video lists can be clicked so users know that they can press that
 
             Cart out function:

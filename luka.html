@@ -28,7 +28,7 @@
 
     <button id="toggle-glitch-btn" style="color: rgb(255, 0, 140); background-color: rgb(221, 252, 255);">I LOVE YOU!</button>
     
-    <section style="border-color: rgb(218, 0, 29); box-shadow: 0px 0px 7px rgb(255, 6, 193);">
+    <section style="border-color: rgb(218, 0, 153); box-shadow: 0px 0px 7px rgb(243, 255, 6);">
       <h2>Luka profile</h2>
       <div class="data">
         <img class="data-card" src="images/luka-profile.jpg" alt="luka">
@@ -42,20 +42,6 @@
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
 
-    <script>
-      const toggleBtn = document.getElementById("toggle-glitch-btn");
-      const hero = document.querySelector(".hero");
-
-      toggleBtn.addEventListener("click", () => {
-        hero.classList.toggle("glitch");
-
-        if (hero.classList.contains("glitch")) {
-          toggleBtn.textContent = "I LOVE YOU!";
-        } else {
-          toggleBtn.textContent = "<3";
-        }
-      });
-    </script>
-
+    <script src="profile.js" defer></script>
 
 </html>
