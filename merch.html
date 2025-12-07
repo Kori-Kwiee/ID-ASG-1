@@ -20,7 +20,7 @@
     </nav>
 
     <div class="hero hero-luka" >
-      <a href="https://open.spotify.com/playlist/0hjKU06sgGEQVD8KTBdiwp" 
+      <a href="https://www.harum.io/collections/alien-stage-anime-merch" 
       data-text="Merchandise" 
       target="_blank">
         Merchandise
@@ -29,24 +29,137 @@
 
     <button id="toggle-glitch-btn">Traumatize them!</button>
 
-    <section>
-      <h2>Merchandise</h2>
+    <section id="merch">
+      <h1>Merchandise</h1>
       <p>Current merchandise for sale</p>
-      <ul>
-        <li>
-          Mizi keychain – $5 <br>
-          Sua keychain – $5 <br>
-          Ivan keychain – $5 <br>
-          Till keychain – $5 <br>
-          Luka keychain – $5 <br>
-          Hyuna keychain – $5 <br>
-        </li>
-      </ul>
+      <p>Maximum purchase per person = 1</p>
+      
+      <div class="merch-layout">
+        <div class="merch-item">
+          <img src="images/item-badge.webp" alt="Alien Stage Baby Series - Badge Blind Box">
+          <p>Alien Stage Baby Series - 1 Random Badge Blind Box</p>
+          <p>$3.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage Baby Series - 1 Random Badge Blind Box" 
+          data-price="3">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-phonechain.webp" alt="Alien Stage Rabbit Series - Phone Chain Blind Box">
+          <p>Alien Stage Rabbit Series - Random Phone Chain</p>
+          <p>$13.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage Rabbit Series - Random Phone Chain" 
+          data-price="13">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-tillshirt.jpg" alt="Till T-shirt">
+          <p>Alien Stage X ANIPLUS Till T-shirt</p>
+          <p>$38.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage X ANIPLUS Till T-shirt" 
+          data-price="38">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-figurine.webp" alt="Alien Stage - Blind Box Figure">
+          <p>Alien Stage - Random Blind Box Figure</p>
+          <p>$8.50</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage - Randome Blind Box Figure" 
+          data-price="8.5">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-doll.jpeg" alt="Alien Stage - Blind Box Plush Doll">
+          <p>Alien Stage - Random Blind Box Plush Doll</p>
+          <p>$10.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage - Random Blind Box Plush Doll" 
+          data-price="10">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-minidoll.jpg" alt="Alien Stage - Mini Doll Blind Box">
+          <p>Alien Stage - Random Mini Doll Blind Box</p>
+          <p>$9.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage - Random Mini Doll Blind Box" 
+          data-price="10">Add to cart</button>
+        </div>
+
+        <div class="merch-item">
+          <img src="images/item-sunnydoll.webp" alt="Alien Stage - Sunny Doll Series - Blind Box">
+          <p>Alien Stage - Sunny Doll Series - Random Blind Box</p>
+          <p>$10.00</p>
+          <button class="addcartitem" 
+          data-name="Alien Stage - Sunny Doll Series - Random Blind Box" 
+          data-price="12">Add to cart</button>
+        </div>
+
+        <div id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: $0</p>
+
+        <div id="emptcart">
+          <button>Cart Out</button>
+
+        </div>
+      </div>
+
+      </div>
     </section>
 
     <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
     
     <script>
+      let cart = [];
+      
+      const buttons = document.querySelectorAll(".addcartitem");
+      const cartItems = document.getElementById("cart-items");
+      const totalDisplay = document.getElementById("total");
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const name = btn.dataset.name;
+          const price = Number(btn.dataset.price);
+          const exists = cart.some(item => item.name === name);
+          if (exists) {
+            alert("Luka: One only.");
+            return;
+          }
+
+          cart.push({ name, price });
+          updateCart();
+        });
+      });
+
+      function updateCart() {
+        cartItems.innerHTML = "";
+        let total = 0;
+
+        cart.forEach(item => {
+          total += item.price;
+
+          const li = document.createElement("li");
+          li.textContent = `${item.name} — $${item.price}`;
+          cartItems.appendChild(li);
+        });
+
+        totalDisplay.textContent = `Total: $${total}`;
+      }
+
+
+      const carting = document.getElementById("emptcart");
+      carting.addEventListener("click", () => {
+      cart = [];
+      updateCart();
+      alert("Luka: Products bought successfully, enjoy.")
+      });
+      
+      
       const toggleBtn = document.getElementById("toggle-glitch-btn");
       const hero = document.querySelector(".hero");
 
@@ -61,4 +174,5 @@
       });
     </script>
 
+    
 </html>

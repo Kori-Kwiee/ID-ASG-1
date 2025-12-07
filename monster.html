@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alien Stage</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>ALIEN STAGE</header>
+
+    <nav style="color: red; text-shadow: 2px -1px 1px rgba(123, 0, 0, 0.751), -1px 0px 1px rgb(224, 26, 26);">
+      -REGEISTRATION ACCEPTED-
+    </nav>
+
+    <div class="hero hero-monster" >
+      <a data-text="THERE IS NO TURNING BACK">
+        THERE IS NO TURNING BACK
+      </a>
+    </div>
+
+    <button id="toggle-glitch-btn">SING FOR US</button>
+    <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
+
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "..R E S T? FINE.";
+
+          setTimeout(() => {
+            hero.classList.remove("glitch");
+            toggleBtn.textContent = "SING FOR US";
+            }, 2000);
+        } else {
+          toggleBtn.textContent = "SING FOR US";
+        }
+
+      });
+    </script>
+
+</html>
