@@ -20,9 +20,12 @@ Design Process
         I made the website completely with Alien Stage in mind, it has neon flashing lights at times, and is overall quite a heart breaking story. I tried my best to collect fonts that were used in the official Alien Stage website. I also realised that I had 6 main navigation tabs, so I also did my best to link each of the characters that best match the catagory. This website are for the ALNST fans [ALNST is short for alien stage]. This website is basically an all in one for them. A quick link to all the main singing scenes. (Round X vs X), the lastest song dropped, the character reference sheets. etc If any ALNST fan requires a quick and easy find to show their friend, remember something or jott something down. This website would be the most convinient thing they could use to find any Alien Stage information.
 
     In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-
     As a user type, I want to perform an action, so that I can achieve a goal.
+
+        As someone who would often need reference material to draw/write alien stage art/stories. The singers page would be a quick, useful and easy tool to use to get all the main characters' information in one go.
     This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
+
+        Figma prototype: https://www.figma.com/design/31gycrIABlkextMgz4tdJE/Alnst-wip-1?node-id=0-1&t=hKmTECNYFwYXBibn-1
 
 Features
 

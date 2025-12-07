@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alien Stage</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body style="background-color: rgb(28, 35, 92)">
+    <header style="color: rgb(224, 247, 255); background-color: rgba(235, 101, 166, 0.952);">ALIEN STAGE</header>
+
+    <nav style="background-color: rgb(250, 215, 242);">
+      <a style="color: rgb(221, 42, 116);" href="mizi.html">Mizi</a>
+      <a style="color: rgb(221, 42, 116);" href="sua.html">Sua</a>
+      <a style="color: rgb(221, 42, 116);" href="ivan.html">Ivan</a>
+      <a style="color: rgb(221, 42, 116);" href="till.html">Till</a>
+      <a style="color: rgb(221, 42, 116);" href="hyuna.html">Hyuna</a>
+      <a style="color: rgb(221, 42, 116);" href="luka.html">Luka</a>
+    </nav>
+
+    <div class="hero profluka" >
+      <a href="singers.html" 
+      data-text="Luka~">
+        Luka
+      </a>
+    </div>
+
+    <button id="toggle-glitch-btn" style="color: rgb(255, 0, 140); background-color: rgb(221, 252, 255);">I LOVE YOU!</button>
+    
+    <section style="border-color: rgb(218, 0, 29); box-shadow: 0px 0px 7px rgb(255, 6, 193);">
+      <h2>Luka profile</h2>
+      <div class="data">
+        <img class="data-card" src="images/luka-profile.jpg" alt="luka">
+        <div class="profdivider"></div>
+        <img class="data-stats" src="images/luka-fullsheet.jpg" alt="luka">
+      </div>
+      
+      <p>Press Luka's banner name to go back!</p>
+    </section>
+
+
+    <footer>© Vivinos ALIEN STAGE. Fanmade project by Kori.</footer>
+
+    <script>
+      const toggleBtn = document.getElementById("toggle-glitch-btn");
+      const hero = document.querySelector(".hero");
+
+      toggleBtn.addEventListener("click", () => {
+        hero.classList.toggle("glitch");
+
+        if (hero.classList.contains("glitch")) {
+          toggleBtn.textContent = "I LOVE YOU!";
+        } else {
+          toggleBtn.textContent = "<3";
+        }
+      });
+    </script>
+
+
+</html>

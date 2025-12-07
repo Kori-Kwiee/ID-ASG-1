@@ -70,6 +70,16 @@ nav a {
 
 }
 
+.profdivider {
+  height: 4px;
+  width: 60%;
+  margin: 40px auto;
+  border-radius: 2px;
+  background: linear-gradient(to right, #6c7bff, #ff42b3, #6c7bff);
+  animation: textEntrance 5s ease-in-out; 
+
+}
+
 footer {
   background: #3d02028e;
   text-align: center;
@@ -130,6 +140,30 @@ footer {
 
 .hero-monster {
   background: url("images/monsters.jpg") top/cover no-repeat;
+}
+
+.profmizi {
+  background: url("images/mizi-page.jpg") center/cover no-repeat;
+}
+
+.profsua {
+  background: url("images/sua-page.jpg") center/cover no-repeat;
+}
+
+.profivan {
+  background: url("images/ivan-page.jpg") center/cover no-repeat;
+}
+
+.proftill {
+  background: url("images/till-page.jpg") center/cover no-repeat;
+}
+
+.profhyuna {
+  background: url("images/hyuna-page.jpg") center/cover no-repeat;
+}
+
+.profluka {
+  background: url("images/luka-page.jpg") center/cover no-repeat;
 }
 
 @media (max-width: 600px) {
@@ -330,6 +364,7 @@ footer {
   border-radius: 20px;
 }
 
+
 .profile-wrapper {
   display: inline-block;
   margin: 20px;
@@ -361,6 +396,8 @@ footer {
 
 .profile-name {
   font-family: 'audiowide', 'sans-serif';
+  color: white;
+  text-decoration: none;
   font-size: 24px;
   margin-top: 10px;
   
@@ -368,6 +405,20 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.data-card {
+  size: 100%;
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+}
+.data-stats {
+  size: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .signups {
